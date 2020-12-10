@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Printing all key-value pairs in dictionary result_dic:
+Filename= Dog_02.jpg    Pet Label= dog
+Filename= Dog_01.jpg    Pet Label= dog
+Filename= Truck_01.jpg    Pet Label= truck
+Filename= Kangaroo_01.jpg    Pet Label= kangaroo
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_02.jpg  label:                        dog
+ 2 key:                     Dog_01.jpg  label:                        dog
+ 3 key:                   Truck_01.jpg  label:                      truck
+ 4 key:                Kangaroo_01.jpg  label:                   kangaroo
+
+     MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                  Truck_01.jpg: 
+Real:                      truck   Classifier:           pickup, pickup truck
+
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+     MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Truck_01.jpg: 
+Real:                      truck   Classifier:           pickup, pickup truck  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pickup, pickup truck
+1
+wallaby, brush kangaroo
+1
+
+** Total Elapsed Runtime: 0:0:4

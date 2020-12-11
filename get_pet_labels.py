@@ -46,16 +46,13 @@ def get_pet_labels(image_dir):
     
     results_dic = dict()
     
-    for idx in range(0, len(in_files), 1):
-        if in_files[idx][0] != ".":
-            pet_image = in_files[idx].lower().split("_")
-            pet_label = ""
-            for word in pet_image:
-                if word.isalpha():
-                    pet_label += word + " "
+    for filename in in_files:
+        if filename[0] != ".":
+            pet_image = filename.split(".")[0].lower().split("_")
+            pet_label = ' '.join([word for word in pet_image if word.isalpha()])
             pet_label = pet_label.strip()
-            if in_files[idx] not in results_dic:
-                results_dic[in_files[idx]] = [pet_label]
+            if filename not in results_dic:
+                results_dic[filename] = [pet_label]
             else:
                 print("** Warning: This filename already exists in the directory")
     
